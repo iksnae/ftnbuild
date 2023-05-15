@@ -133,6 +133,12 @@ export const json = (tokens) => {
         break
     }
   }
+  
+  const indexedChildren = originalArray.map((root.children, index) => {
+    return { ...root.children, index };
+  });
+  
+  root.children = indexedChildren;
 
   root.metadata = {
     characters: uniq(characters),
